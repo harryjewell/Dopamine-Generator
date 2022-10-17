@@ -1,0 +1,35 @@
+html { font-size: 22px; }
+
+body { padding: 1rem; }
+
+
+/* CARD AND GRID LAYOUT - TUTORIAL FROM https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe */
+.card {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  /* height: 4rem; */
+  height: 300px;
+}
+
+.cards {
+    max-width: 100vw, 100VH;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+   /* If screen size larger than 600px, make grid layout 2 columns */
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* If screen size larger than 900px, make grid layout 4 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(4, 1fr); }
+  }
+/* IF REMOVING MEDIA QUERIES FOR MINMAX DESIRED, REMOVE MEDIA QUERIES AND ADD FOLLOWING LINE TO THE .CARDS SELECTOR
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+COLUMNS WILL AUTOMATICALLY BREAK WHEN EACH ONE GETS BELOW 300PX */
+
+
