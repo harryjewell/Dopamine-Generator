@@ -1,0 +1,116 @@
+html { 
+    font-size: 22px; 
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body { 
+    padding: 1rem; 
+}
+
+
+/* CARD AND GRID LAYOUT - TUTORIAL FROM https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe */
+.card {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  /* height: 4rem; */
+  height: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card  {
+
+
+}
+
+.card#doggo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-size: cover; */
+  background-position: center;
+  padding: 20px;
+}
+
+.cards {
+    max-width: 50vw, 50vh;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+   /* If screen size larger than 600px, make grid layout 2 columns */
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* If screen size larger than 900px, make grid layout 2 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+/* IF REMOVING MEDIA QUERIES FOR MINMAX DESIRED, REMOVE MEDIA QUERIES AND ADD FOLLOWING LINE TO THE .CARDS SELECTOR
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+COLUMNS WILL AUTOMATICALLY BREAK WHEN EACH ONE GETS BELOW 300PX */
+
+
+/* SITE NAVIGATION 2 */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: dodgerblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
