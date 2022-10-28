@@ -14,69 +14,52 @@
 </head>
 
 <body>
-
+    <div id="header">
     <h1>DOPAMINE GENERATOR</h1>
+    </div>
 
     <div class="navbar">
-        <a href="#home">New Advice</a>
+        <a href="#home">New Quote</a>
         <a href="#home">New Doggo</a>
         <a href="#home">New Gif</a>
         <a href="#home">New Music</a>
         <a href="#home">Vibe Change</a>
-        <!-- <div class="dropdown">
-        <button class="dropbtn">Vibe Change
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">Happy</a>
-            <a href="#">Sad</a>
-            <a href="#">Chill</a>
-            <a href="#">Extreme</a>
-        </div>
-    </div>  -->
     </div>
-
-
-
-
-
 
     <div class="cards">
 
-        <div class="card" id="advice">NEW QUOTE
-
+        <div class="card" id="advice">
             <!-- GET QUOTE -->
             <div class="wrapper">
                 <div class="container">
                     <p id="quote">Lorem ipsum</p>
                     <h3 id="author">Lorem, ipsum.</h3>
-                    <button id="btn">Get Quote</button>
+                    <button id="btn">New Quote</button>
                 </div>
             </div>
-
-            <!-- GET ADVICE -->
-            <!-- <div class="advicecontainer"> -->
-            <!-- <div id="results"></div> -->
-            <!-- <button class="btn" id="getData">Get Advice</button> -->
-            <!-- </div> -->
         </div>
 
 
-        <div class="card" id="doggo">NEW DOGGO</div>
-
-
-        <div class="card" id="giffo" >NEW GIF
-            
-            <div id="gifContainer">image here</div>
-
-            <button id="btn" onclick="setup()">Get Quote</button>
+        <div class="card" id="doggo">
+            <div class="wrapper">
+                <div class="container">
+                    <button id="btn">New Doggo</button>
+                </div>
+            </div>
         </div>
 
 
-        <div class="card" id="soundo">NEW MUSIC
-            <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/0qsXmYddIKdeaAtqhxD3NF?utm_source=generator" width="100%"
-                height="380" frameBorder="0" allowfullscreen=""
+        <div class="card" id="giffo">
+            <button id="btn" onclick="setup()">New GIF</button>
+                    <div id="gifContainer">Gif Loading</div>
+                    
+        </div>
+
+
+        <div class="card" id="soundo">
+            <iframe style="border-radius:4px"
+                src="https://open.spotify.com/embed/playlist/0qsXmYddIKdeaAtqhxD3NF?utm_source=generator&theme=0"
+                width="100%" height="380" frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </div>
@@ -89,8 +72,7 @@
     <!-- END HTML============================================================================================================================================================================== -->
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <!-- <script src="main.js"></script> -->
 
