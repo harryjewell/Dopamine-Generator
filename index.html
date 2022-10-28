@@ -11,30 +11,35 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" type="text/css" href="/harrystylesdopaminegenerator.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-    <div id="header">
-    <h1>DOPAMINE GENERATOR</h1>
+<body id="bodyo" onload="loading()" class="">
+    <div id="heado" class="headerWrapper">
+        <div id="header">
+          <h1>DOPAMINE GENERATOR</h1>
+        </div>
     </div>
 
-    <div class="navbar">
-        <button id="btn">New Quote</button>
-        <a href="#home">New Doggo</a>
+    <div id="navo" class="navbar">
+        <button id="btn" onclick="getQuoto()">New Quote</button>
+        <button id="btn" onclick="getDoggo()">New Doggo</button>
         <button id="btn" onclick="setup()">New Gif</button>
-        <a href="#home">New Music</a>
-        <button id="btn" onClick="window.location.reload();">Vibe Change</button>
+        <a href="#home" onclick="startNewMusic()">New Music</a>
+        <a href="#home" onclick=" startRaveParty()">Rave Party</a>
+        <button id="btn" onClick="window.location.reload()">Vibe Change</button>
+       
     </div>
 
     <div class="cards">
 
-        <div class="card" id="advice">
+        <div id="quoto" class="card">
             <!-- GET QUOTE -->
-            <div class="wrapper">
+            <div id="" class="wrapper">
                 <div class="container">
                     <p id="quote">Lorem ipsum</p>
                     <h3 id="author">Lorem, ipsum.</h3>
-                    <button id="btn">New Quote</button>
+                    <button id="btn" onclick="getQuoto()">New Quote</button>
                 </div>
             </div>
         </div>
@@ -43,7 +48,7 @@
         <div class="card" id="doggo">
             <div class="wrapper">
                 <div class="container">
-                    <button id="btn">New Doggo</button>
+                    <button id="btn" onclick="getDoggo()">New Doggo</button>
                 </div>
             </div>
         </div>
@@ -56,10 +61,11 @@
         </div>
 
 
-        <div class="card" id="soundo">
+        <div class="card" id="soundo" class="">
+            <p id="newMusic" class="hidden"> For new music, press skip here!!</p>
             <iframe style="border-radius:4px"
                 src="https://open.spotify.com/embed/playlist/0qsXmYddIKdeaAtqhxD3NF?utm_source=generator&theme=0"
-                width="100%" height="380" frameBorder="0" allowfullscreen=""
+                width="100%" min-height="380" frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </div>
