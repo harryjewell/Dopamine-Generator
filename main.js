@@ -18,6 +18,7 @@ function getDoggo(){
   }
     
   
+  // RAVE PARTY FUNCTION ==========================================================================================================
   function startRaveParty(){
     document.getElementById("soundo").classList.add("raveParty");
     document.getElementById("quoto").classList.add("raveParty");
@@ -27,13 +28,16 @@ function getDoggo(){
     document.getElementById("navo").classList.add("raveParty");
     document.getElementById("bodyo").classList.add("raveParty");
   
+    // SCROLLS DOWN 500PX WHEN NEW MUSIC BUTTON CLICKED IN NAV
     window.scrollBy(0, 500);
   
+    // SETS TIMER FOR RAVE PARTY 8000 = 8 SECONDS
     setTimeout(() => {
       endRaveParty();
     }, 8000);
   }
   
+  // ENDS RAVE PARTY FUNCTION AFTER TIMEOUT
   function endRaveParty(){
     document.getElementById("soundo").classList.remove("raveParty");
     document.getElementById("quoto").classList.remove("raveParty");
@@ -44,68 +48,29 @@ function getDoggo(){
     document.getElementById("bodyo").classList.remove("raveParty");
   }
   
+  // NEW MUSIC BUTTON (NAV) ACTIVATES RAVE PARTY ON JUST SPOTIFY DIV - ACTIVATES HIDDEN TEXT ==========================================================
   function startNewMusic(){
       document.getElementById("newMusic").classList.remove("hidden");
       document.getElementById("soundo").classList.add("raveParty");
       window.scrollBy(0, 500);
   
+// SETS 8 SECOND TIMEOUT FOR FUNCTION
       setTimeout(() => {
         endNewMusic();
       }, 8000);
   }
   
+  // ENDS RAVE PARTY ON SPOTIFY DIV
   function endNewMusic(){
     document.getElementById("newMusic").classList.add("hidden");
     document.getElementById("soundo").classList.remove("raveParty");
   }
   
-  
-  
-  //NEXT
-  
-  //can also use .innerHTML
-  // document.getElementById('advice').innerHTML += '<p>test</p>';
-  
-  // when looking at answers need JAVASCRIPT NOT JQUERY
-  
-  
-  
-  
-  //ORIGINAL ADVICE JS ========================================================================================================================================
-  //ADVICE CALL FROM https://api.adviceslip.com/
-  // const resDiv = document.querySelector('#results');
-  // const resBtn = document.querySelector('#getData');
-  
-  
-  
-  // resBtn.addEventListener('click', () => {
-  //   getAdvice();
-  // });
-  
-  // window.onload = () => {
-  //   getAdvice();
-  // };
-  
-  
-  
-  // function getAdvice() {
-  
-  //   fetch('	https://api.adviceslip.com/advice').then(response => {
-  //     return response.json();
-  //   }).then(adviceData => {
-  //     const Adviceobj = adviceData.slip;
-  //     resDiv.innerHTML = `<p>${Adviceobj.advice}</p>`;
-  //   }).catch(error => {
-  //     console.log(error);
-  //   });
-  
-  // }
-  
+  // LOADS DOG AND QUOTE
   function loading(){
     getQuoto();
     getDoggo();
   }
-  
   
   // QUOTE JS ========================================================================================================================================
   function getQuoto(){
@@ -123,11 +88,6 @@ function getDoggo(){
         author.innerText = item.author;
       });
   };
-  // window.addEventListener("load", getQuote);
-  // btn.addEventListener("click", getQuote);
-  // }
-  
-  
   
   //GIF JS =========================================================================================================================================
   var api = 'https://api.giphy.com/v1/gifs/random?';
@@ -146,6 +106,7 @@ function getDoggo(){
     loadJSON(url, gotData);
   }
   
+  // RETRIEVES AND DISPLAYS RANDOM GIF
   function gotData(giphy) {
       console.log(giphy);
     for (var i = 0; i < giphy.data.length; i++) {
