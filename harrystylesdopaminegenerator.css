@@ -1,6 +1,7 @@
 /* SETS BASIC FUNCTIONALITY ON PAGE ============================================================================================================================ */
+
 html {
-  font-size: 22px;
+  font-size: 1em;
   font-family: 'Fira Sans', sans-serif;
   width: 100%;
   height: 100%;
@@ -19,7 +20,7 @@ h3 {
 body {
   padding: 1rem;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background-size: 500% 500%;
   animation: gradient 8s ease infinite;
 }
 
@@ -43,17 +44,20 @@ body {
 /* HEADER SCROLL ============================================================================================================================ */
 
 /* HANDLES THE SCROLLING TEXT IN THE PAGE TITLE*/
-.headerWrapper{
+.headerWrapper {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
+
 #header {
-  height: 50px;
+  height: 100px;
 }
 
 /* HANDLES THE SCROLLING TEXT IN THE PAGE TITLE - ANIMATIONS - SPEED DIRECTION AND LAYOUT*/
 #header h1 {
+  font-size: 4em;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -77,6 +81,7 @@ body {
 
 
 /* CARD AND GRID LAYOUT ============================================================================================================================ */
+
 /* INDIVIDUAL CARDS - TUTORIAL FROM https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe */
 .card {
   background-color: transparent;
@@ -109,13 +114,36 @@ body {
 }
 
 /* If screen size larger than 900px, make grid layout 2 columns */
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* IF REMOVING MEDIA QUERIES FOR MINMAX DESIRED, REMOVE MEDIA QUERIES AND ADD FOLLOWING LINE TO THE .CARDS SELECTOR
+/* stops The quote from sizing itself out of the div on smaller screen size, making the new quote button non-functional */
+@media screen and (min-width: 600px) {
+  .container p {
+    font-size: 90%;
+    /* Base font-size of 32px */
+  }
+}
+
+/* increases quote on different screen sizes */
+@media screen and (min-width: 960px) {
+  .container p {
+    font-size: 150%;
+  }
+}
+
+
+/* If screen size larger than 960px, make header height 50px */
+@media (min-width: 960px) {
+  #header {
+    height: 50px;
+  }
+}
+
+/* FOR CARDS - IF REMOVING MEDIA QUERIES FOR MINMAX DESIRED, REMOVE MEDIA QUERIES AND ADD FOLLOWING LINE TO THE .CARDS SELECTOR
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 COLUMNS WILL AUTOMATICALLY BREAK WHEN EACH ONE GETS BELOW 300PX */
 
@@ -132,7 +160,7 @@ COLUMNS WILL AUTOMATICALLY BREAK WHEN EACH ONE GETS BELOW 300PX */
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   box-shadow: 0 15px 65px rgba(87, 11, 16, 0.5);
-   /* background-color: transparent; */
+  /* background-color: transparent; */
 }
 
 /* STYLE AND LAYOUT NAVIGATION MENU - A HREF LINKS */
@@ -256,14 +284,14 @@ COLUMNS WILL AUTOMATICALLY BREAK WHEN EACH ONE GETS BELOW 300PX */
 .container p {
   color: #303;
   line-height: 2;
-  font-size: 22px;
+  /* font-size: 22px; */
 }
 
 /* QUOTE AUTHOR DISPLAY */
 .container h3 {
   color: #303;
   margin: 20px 0 60px 0;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-transform: capitalize;
 }
 
@@ -404,30 +432,44 @@ iframe {
 }
 
 /* New music button in nav displays text when clicked - can't target button in spotify widget for next song */
-.hidden{
+.hidden {
   display: none;
 }
 
-#newMusic{
- width: 100%;
+#newMusic {
+  width: 100%;
 }
 
 
 
 /* RAVE PARTY ANIMATIONS ON CARDS AND DIVS ============================================================================================================================ */
-.raveParty{
+.raveParty {
   animation: ravePartyAnimation 1s linear infinite;
 }
 
 @keyframes ravePartyAnimation {
-  0% {box-shadow: inset 0 0 3rem #f8a100;
-      background-color: #f800b6;}
-  20% {box-shadow: inset 0 0 3rem #00ff22;
-     background-color: #b600f8;}
-  40% {box-shadow: inset 0 0 3rem #00f8ec;
-     background-color: #00f8ec;}
-  60% {box-shadow: inset 0 0 3rem #b600f8;
-     background-color: #00ff22;}
-  100% {box-shadow: inset 0 0 3rem #f800b6;
-     background-color: #f8a100;}
+  0% {
+    box-shadow: inset 0 0 3rem #f8a100;
+    background-color: #f800b6;
+  }
+
+  20% {
+    box-shadow: inset 0 0 3rem #00ff22;
+    background-color: #b600f8;
+  }
+
+  40% {
+    box-shadow: inset 0 0 3rem #00f8ec;
+    background-color: #00f8ec;
+  }
+
+  60% {
+    box-shadow: inset 0 0 3rem #b600f8;
+    background-color: #00ff22;
+  }
+
+  100% {
+    box-shadow: inset 0 0 3rem #f800b6;
+    background-color: #f8a100;
+  }
 }

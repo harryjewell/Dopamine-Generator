@@ -14,13 +14,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
+<!-- HANDLES BODY -->
 <body id="bodyo" onload="loading()" class="">
+
+    <!-- HANDLES HEADER -->
     <div id="heado" class="headerWrapper">
         <div id="header">
-          <h1>DOPAMINE GENERATOR</h1>
+            <h1>DOPAMINE GENERATOR</h1>
         </div>
     </div>
 
+    <!-- HANDLES NAVIGATION  -->
     <div id="navo" class="navbar">
         <button id="btn" onclick="getQuoto()">New Quote</button>
         <button id="btn" onclick="getDoggo()">New Doggo</button>
@@ -30,18 +34,21 @@
         <button id="btn" onClick="window.location.reload()">Vibe Change</button>
     </div>
 
+    <!-- PAGE "CARDS" - GROUP -->
     <div class="cards">
+
+        <!-- QUOTE CARD -->
         <div id="quoto" class="card">
             <div id="" class="wrapper">
                 <div class="container">
-                    <p id="quote">Lorem ipsum</p>
-                        <h3 id="author">Lorem, ipsum.</h3>
+                    <p id="quote">Quote Loading</p>
+                    <h3 id="author">Author Loading</h3>
                     <button id="btn" onclick="getQuoto()">New Quote</button>
                 </div>
             </div>
         </div>
 
-
+        <!--DOGGO CARD  -->
         <div class="card" id="doggo">
             <div class="wrapper">
                 <div class="container">
@@ -50,26 +57,24 @@
             </div>
         </div>
 
-
+        <!-- GIF CARD -->
         <div class="card" id="giffo">
             <button id="btn" onclick="setup()">New GIF</button>
-                    <div id="gifContainer">Gif Loading</div>
-                    
+            <div id="gifContainer">Gif Loading</div>
         </div>
 
-
+        <!-- SPOTIFY CARD -->
         <div class="card" id="soundo" class="">
             <p id="newMusic" class="hidden"> For new music, press skip here!!</p>
-            <iframe style="border-radius:4px"
+            <iframe id="spotifywidget" style="border-radius:4px"
                 src="https://open.spotify.com/embed/playlist/0qsXmYddIKdeaAtqhxD3NF?utm_source=generator&theme=0"
-                width="100%" min-height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
         </div>
     </div>
 
-
-    <!-- GIF HTML============================================================================================================================================================================== -->
+    <!-- JS HTML LINKS ================================================================================================= -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
